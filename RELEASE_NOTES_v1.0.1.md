@@ -40,11 +40,9 @@ Do not use GitHub's automatically generated **Source code (zip)** or **Source co
 
 SHA-256 for `CMZ_Mod_Manager_v1.0.1_Portable.zip`:
 
-`CAA EBD381725CB8B0130D351181185F965C408527D2832F2B1C8DA75EDEF653D`
-
-Canonical checksum without spacing:
-
 `CAAEBD381725CB8B0130D351181185F965C408527D2832F2B1C8DA75EDEF653D`
+
+The same checksum is published in [`CMZ_Mod_Manager_v1.0.1_SHA256.txt`](CMZ_Mod_Manager_v1.0.1_SHA256.txt).
 
 ## Privacy and third-party code
 
