@@ -5,7 +5,7 @@ A general-purpose mod manager and modding framework for **CastleMiner Z 1.9.9.8 
 CastleMiner Z Mod Manager provides mod package management, profiles, compatibility/dependency resolution, clean and modded launch modes, game-file validation and repair, diagnostics, multilingual UI support, themes, and an integrated CastleMiner Z World Builder.
 
 > **Current version:** v1.0.1  
-> The ready-to-use package is `CMZ_Mod_Manager_v1.0.1_Portable.zip`. Download it from the **v1.0.1 GitHub Release** when that release asset is available. Do not use GitHub's automatically generated source-code archives as the Mod Manager download.
+> The ready-to-use package is `CMZ_Mod_Manager_v1.0.1_Portable.zip`. Download it from the **v1.0.1 GitHub Release**. Do not use GitHub's automatically generated source-code archives as the Mod Manager download.
 
 ## What's new in v1.0.1
 
