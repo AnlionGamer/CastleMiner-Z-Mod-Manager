@@ -4,8 +4,24 @@ A general-purpose mod manager and modding framework for **CastleMiner Z 1.9.9.8 
 
 CastleMiner Z Mod Manager provides mod package management, profiles, compatibility/dependency resolution, clean and modded launch modes, game-file validation and repair, diagnostics, multilingual UI support, themes, and an integrated CastleMiner Z World Builder.
 
-> **Current release:** v1.0.0  
-> Download the ready-to-use portable package from the repository's **Releases** section. Use `CMZ_Mod_Manager_v1.0.0.zip` — not GitHub's automatically generated source-code archives.
+> **Current version:** v1.0.1  
+> The ready-to-use package is `CMZ_Mod_Manager_v1.0.1_Portable.zip`. Download it from the **v1.0.1 GitHub Release** when that release asset is available. Do not use GitHub's automatically generated source-code archives as the Mod Manager download.
+
+## What's new in v1.0.1
+
+v1.0.1 is a maintenance and privacy-hardening update to the initial public release.
+
+- Reduces exposure of Steam64 IDs and absolute local paths in normal World Builder UI
+- Strengthens privacy sanitization for diagnostics
+- Stops automatically bundling third-party mod logs into diagnostic exports
+- Uses neutral names for exported profile files and limits exported session history
+- Cleans successful/cancelled scenario job records and bounds failed-job retention
+- Aligns Mod Manager and integrated World Builder product versioning to v1.0.1
+- Corrects the World Builder v1.0.1 label across all 23 interface languages
+
+The CMZ Runtime and Mod SDK remain at **v1.0.0** because their runtime/API implementation did not change in this maintenance release.
+
+See [`RELEASE_NOTES_v1.0.1.md`](RELEASE_NOTES_v1.0.1.md) for details.
 
 ## Features
 
@@ -25,7 +41,7 @@ CastleMiner Z Mod Manager provides mod package management, profiles, compatibili
 
 ## Installation
 
-1. Open **Releases** and download `CMZ_Mod_Manager_v1.0.0.zip`.
+1. Open **Releases** and download `CMZ_Mod_Manager_v1.0.1_Portable.zip` from the **v1.0.1** release.
 2. Extract the ZIP to a permanent folder of your choice.
 3. Run `CMZModManager.exe`.
 4. Choose your language on first launch.
@@ -33,6 +49,14 @@ CastleMiner Z Mod Manager provides mod package management, profiles, compatibili
 6. Follow the Mod Manager's framework setup prompts.
 
 The Manager expects the supported **CastleMiner Z 1.9.9.8 Steam/Windows** release.
+
+## Privacy and trust
+
+CastleMiner Z Mod Manager does not include first-party telemetry or analytics. v1.0.1 further reduces exposure of local identifiers in normal UI and sanitizes information included in Manager-generated diagnostic exports.
+
+Diagnostic sanitization is intended to reduce accidental disclosure, not to make arbitrary files safe to publish without review. In particular, third-party mod logs are not automatically bundled into the standard diagnostics ZIP.
+
+Runtime mods and custom scenario generators are executable third-party code and are **not sandboxed**. Only install mods and scenario packages from authors you trust. Package integrity checks verify package contents and hashes; they do not prove that third-party code is trustworthy.
 
 ## Windows security notice
 
@@ -56,7 +80,7 @@ English (United States) is the fallback language.
 
 GitHub Issues may be used for Mod Manager bug reports and feature requests. For a bug report, include the Mod Manager version, Windows version, what happened, what you expected, and reproduction steps. A sanitized diagnostics ZIP from the Manager can be attached when useful.
 
-**Do not upload CastleMiner Z game files or your full game installation to an issue.**
+**Review diagnostic files before sharing them publicly, and do not upload CastleMiner Z game files or your full game installation to an issue.**
 
 ## Third-party software
 
