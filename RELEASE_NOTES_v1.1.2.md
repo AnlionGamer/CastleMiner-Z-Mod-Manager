@@ -1,6 +1,15 @@
 # CastleMiner Z Mod Manager v1.1.2
 
-CastleMiner Z Mod Manager v1.1.2 is a stability, diagnostics, launch-state, and generic tool-architecture release for **CastleMiner Z 1.9.9.8 on Steam for Windows**.
+CastleMiner Z Mod Manager v1.1.2 is a stability, diagnostics, launch-state, Windows application-identity/icon, and generic tool-architecture release for **CastleMiner Z 1.9.9.8 on Steam for Windows**.
+
+## Windows application icon fix
+
+- Corrects the Windows `.ico` resource layout used by `CMZModManager.exe`.
+- Native 16, 20, 24, 32, 40, 48, 64, and 128 px icon frames use uncompressed 32-bit Windows DIB data; the 256 px frame uses PNG compression.
+- The Manager explicitly applies the embedded executable icon to the native WPF window for both large and small window/taskbar icon slots.
+- Adds the stable Windows AppUserModelID `AnlionGamer.CastleMinerZ.ModManager`.
+- Builder validation now rejects the prior all-PNG small-icon layout so the packaging regression cannot silently return.
+- Runtime testing on Windows confirmed that the corrected build restores the expected CastleMiner Z Mod Manager icon for the running application/taskbar entry.
 
 ## Generic Tools architecture
 
@@ -84,7 +93,7 @@ Do not use GitHub's automatically generated **Source code (zip)** or **Source co
 
 SHA-256 for `CMZ_Mod_Manager_v1.1.2_Portable.zip`:
 
-`F2629DCE025375B082DA09C1B148A82FE567FEA32CDEAB5138242B95701009F4`
+`FA651EE623905B6AAC14476283975D7CF0EBB3F747C11976DB810B98A0A69FC1`
 
 The same checksum is published in [`CMZ_Mod_Manager_v1.1.2_SHA256.txt`](CMZ_Mod_Manager_v1.1.2_SHA256.txt).
 
