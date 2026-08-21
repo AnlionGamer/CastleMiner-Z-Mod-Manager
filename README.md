@@ -9,8 +9,10 @@ CastleMiner Z Mod Manager provides mod package management, profiles, compatibili
 
 ## What's new in v1.1.2
 
-v1.1.2 focuses on stability, diagnostics, launch-state correctness, and separating independent tools from the Mod Manager release.
+v1.1.2 focuses on stability, diagnostics, launch-state correctness, Windows application identity/icon handling, and separating independent tools from the Mod Manager release.
 
+- Corrects Windows application icon packaging and taskbar/window icon handling so the running Manager uses the CastleMiner Z Mod Manager icon instead of falling back to a generic application icon
+- Adds a stable Windows AppUserModelID and explicitly applies the embedded application icon to the native window
 - Adds the generic format-1 `.cmztool` package architecture for independently distributed utilities
 - Keeps installed Tools and ToolData separate from the Mod Manager so either can be updated independently
 - Prevents update/reinstall/downgrade/uninstall operations while a tool is running
