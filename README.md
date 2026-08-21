@@ -60,6 +60,27 @@ See [`RELEASE_NOTES_v1.1.2.md`](RELEASE_NOTES_v1.1.2.md) for details.
 
 The Manager supports the **CastleMiner Z 1.9.9.8 Steam/Windows** release.
 
+## License, extensions, and responsible use
+
+CastleMiner Z Mod Manager itself is **proprietary software**. The community is expressly permitted to use the official Manager normally and to create and distribute original extensions through its supported extension mechanisms.
+
+Permitted community content includes, but is not limited to:
+
+- `.cmzmod` gameplay mods
+- `.cmztool` utilities
+- custom themes
+- translations and localization resources
+- configurations, presets, and shareable profiles
+- integrations and other extensions using documented public APIs, SDK interfaces, schemas, package formats, or theme formats
+
+Extension authors retain ownership of their own original work, subject to any third-party rights involved. Compatible projects may truthfully state that they are made for, compatible with, or require CastleMiner Z Mod Manager.
+
+The Mod Manager itself may not be repackaged, rebranded, redistributed, sold, or published as a modified/derivative Manager without permission. Users should link others to an official distribution location rather than reuploading the Manager.
+
+The project is intended for legitimate modding. It must not be used to deliberately attack, crash, exploit, corrupt, impersonate, or otherwise harm other players, hosts, systems, or multiplayer sessions. Legitimate single-player use, consensual multiplayer modifications, host customization, accessibility work, debugging, interoperability, and good-faith security research remain permitted within the terms of the license.
+
+See [`LICENSE.md`](LICENSE.md) for the complete **CastleMiner Z Mod Manager Community Use and Extension License v1.0**.
+
 ## Privacy and trust
 
 CastleMiner Z Mod Manager does not include first-party telemetry or analytics. Diagnostic exports redact common local paths, Steam64 IDs, and custom Manager profile names, and third-party mod logs are not included automatically in the standard diagnostics ZIP.
