@@ -1,0 +1,41 @@
+name: Feature Request
+description: Suggest an improvement for CastleMiner Z Mod Manager
+title: "[Feature] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for Mod Manager or framework improvements. Independently distributed tools and gameplay mods may have their own project pages.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem or limitation would this address?
+      description: Explain the user-facing need rather than only the proposed implementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Describe what you would like the Mod Manager to do.
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Expected benefit
+      description: Explain how this would improve usability, reliability, compatibility, safety, or the modding workflow.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or additional context
+      description: Include other approaches, examples, screenshots, or related details if relevant.
+    validations:
+      required: false
