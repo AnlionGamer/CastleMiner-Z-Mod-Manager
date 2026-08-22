@@ -4,34 +4,29 @@ A general-purpose mod manager and modding framework for **CastleMiner Z 1.9.9.8 
 
 CastleMiner Z Mod Manager provides mod package management, profiles, compatibility/dependency resolution, clean and modded launch modes, game-file validation and repair, diagnostics, multilingual UI support, themes, reusable per-mod settings, and a generic Tools system for independently distributed `.cmztool` utilities.
 
-> **Current version:** v1.1.2  
-> The ready-to-use package is `CMZ_Mod_Manager_v1.1.2_Portable.zip`. Download it from the **v1.1.2 GitHub Release**. Do not use GitHub's automatically generated source-code archives as the Mod Manager download.
+> **Current version:** v1.1.3  
+> The ready-to-use package is `CMZ_Mod_Manager_v1.1.3_Portable.zip`. Download it from the **v1.1.3 GitHub Release**. Do not use GitHub's automatically generated source-code archives as the Mod Manager download.
 
-## What's new in v1.1.2
+## What's new in v1.1.3
 
-v1.1.2 focuses on stability, diagnostics, launch-state correctness, Windows application identity/icon handling, and separating independent tools from the Mod Manager release.
+v1.1.3 is a reliability and release-hardening update that preserves the v1.1.2 feature set while resolving issues found during later Windows runtime testing.
 
-- Corrects Windows application icon packaging and taskbar/window icon handling so the running Manager uses the CastleMiner Z Mod Manager icon instead of falling back to a generic application icon
-- Adds a stable Windows AppUserModelID and explicitly applies the embedded application icon to the native window
-- Adds the generic format-1 `.cmztool` package architecture for independently distributed utilities
-- Keeps installed Tools and ToolData separate from the Mod Manager so either can be updated independently
-- Prevents update/reinstall/downgrade/uninstall operations while a tool is running
-- Refreshes a tool's **Running** state automatically when a Manager-launched tool process exits
-- Aligns the Tools page toolbar, cards, typography, spacing, and action area with the Mods page
-- Places **Profiles** directly above **Mods** in the left navigation
-- Keeps the Diagnostics page shell fixed while only diagnostic content scrolls
-- Uses one-use launch authorization tied to the observed `CastleMinerZ.exe` process so later direct Steam launches do not inherit an old Manager authorization
-- Uses structured runtime shutdown evidence instead of treating shutdown start or ProcessExit fallback alone as a completed normal shutdown
-- Distinguishes **Core Game Files Verified** quick checks from the authoritative 948-file **Clean Install Verified** baseline
-- Uses safer staged/atomic replacement patterns for critical state, configuration, and repair writes
-- Blocks file-mutating game operations while the selected CastleMiner Z process is running
-- Recognizes existing first-party v1.1.1 framework installs as **Framework Update Required** rather than unknown corruption
+- Hardens Windows title-bar/taskbar icon handling and the packaged multi-size `.ico`
+- Uses the canonical high-resolution icon at WPF and native window layers with normal system-assigned portable application identity
+- Corrects native icon-handle lifetime management
+- Adds `ManagerIcon.log` diagnostics for future icon troubleshooting
+- Fixes Launch Clean post-session restoration so unavailable `Process.ExitCode` data cannot interrupt framework restoration
+- Records **Process Exited — Exit Code Unavailable** when Windows does not expose an exit code to the Manager
+- Records when the previous framework was restored after a Clean session
+- Updates all current Manager product/assembly/file/informational identity to **v1.1.3**
+- Includes the CastleMiner Z Mod Manager Community Use and Extension License v1.0 in the finished portable package
+- Strengthens final package checks for version identity, required icon/license files, release boundaries, and release-only contents
 
-The v1.1.1 multi-select mod-settings support remains included.
+**Runtime verified on Windows:** Launch Clean restored the framework successfully; tested official mods worked in a normal modded session; the independently distributed World Builder tool worked as intended; and the unpinned taskbar icon remained correct across repeated launches and after a full shutdown/reboot.
 
-The CMZ Runtime implementation/file version is **v1.0.1** while its assembly compatibility identity and mod-facing Framework compatibility remain **v1.0.0**. The CMZ Mod SDK/API remains **v1.0.0**.
+The CMZ Runtime implementation/file version remains **v1.0.1** while its assembly compatibility identity and mod-facing Framework compatibility remain **v1.0.0**. The CMZ Mod SDK/API remains **v1.0.0**.
 
-See [`RELEASE_NOTES_v1.1.2.md`](RELEASE_NOTES_v1.1.2.md) for details.
+See [`RELEASE_NOTES_v1.1.3.md`](RELEASE_NOTES_v1.1.3.md) for full details.
 
 ## Features
 
@@ -47,11 +42,12 @@ See [`RELEASE_NOTES_v1.1.2.md`](RELEASE_NOTES_v1.1.2.md) for details.
 - Install and manage independently distributed `.cmztool` utilities from the **Tools** page
 - 23 interface languages
 - Built-in light, dark, system, and CastleMiner Z material themes
+- Custom theme support
 - Diagnostics, recovery, and session history tools
 
 ## Installation
 
-1. Open **Releases** and download `CMZ_Mod_Manager_v1.1.2_Portable.zip` from the **v1.1.2** release.
+1. Open **Releases** and download `CMZ_Mod_Manager_v1.1.3_Portable.zip` from the **v1.1.3** release.
 2. Extract the ZIP to a permanent folder of your choice.
 3. Run `CMZModManager.exe`.
 4. Choose your language on first launch.
@@ -121,7 +117,7 @@ The distributed Mod Manager includes **Harmony 2.4.2**, licensed under the MIT L
 
 ## Version boundaries
 
-- CastleMiner Z Mod Manager: **v1.1.2**
+- CastleMiner Z Mod Manager: **v1.1.3**
 - CMZ Runtime implementation/file version: **v1.0.1**
 - Runtime assembly compatibility identity: **v1.0.0.0**
 - Mod-facing Framework compatibility: **v1.0.0**
@@ -130,8 +126,18 @@ The distributed Mod Manager includes **Harmony 2.4.2**, licensed under the MIT L
 - `.cmztool` package format: **1**
 - Supported game: **CastleMiner Z 1.9.9.8 — Steam / Windows**
 
+## Release integrity
+
+SHA-256 for `CMZ_Mod_Manager_v1.1.3_Portable.zip`:
+
+`B0267A8D85375E3485EA4A0E2CCB671212F7A8A35B16D7074E932354165F0E05`
+
+The checksum is also published in [`CMZ_Mod_Manager_v1.1.3_SHA256.txt`](CMZ_Mod_Manager_v1.1.3_SHA256.txt).
+
 ## Project status
 
 This repository is the public distribution home for CastleMiner Z Mod Manager releases. Development, builder material, and independently distributed tools are maintained separately and are not included in the public Mod Manager release package.
+
+The public v1.1.3 portable package contains the finished Mod Manager and required runtime/support files only. It contains **no builder/source tree**, **no bundled `.cmzmod` mods**, **no bundled `.cmztool` tools**, and **no bundled `.cmzscenario` scenarios**.
 
 CastleMiner Z Mod Manager is an unofficial community project and is not affiliated with or endorsed by the developers or publisher of CastleMiner Z.
