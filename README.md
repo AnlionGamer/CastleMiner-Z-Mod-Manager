@@ -2,6 +2,8 @@
 
 A general-purpose mod manager and modding framework for **CastleMiner Z 1.9.9.8 on Steam for Windows**.
 
+> **Unofficial community project:** CastleMiner Z Mod Manager is independently created and published by AnlionGamer. It is not an official CastleMiner Z release and is not affiliated with, sponsored by, approved by, or endorsed by the developers or publisher of CastleMiner Z.
+
 CastleMiner Z Mod Manager provides mod package management, profiles, compatibility/dependency resolution, clean and modded launch modes, game-file validation and repair, diagnostics, multilingual UI support, themes, reusable per-mod settings, and a generic Tools system for independently distributed `.cmztool` utilities.
 
 > **Current version:** v1.1.3  
@@ -22,7 +24,7 @@ v1.1.3 is a reliability and release-hardening update that preserves the v1.1.2 f
 - Includes the CastleMiner Z Mod Manager Community Use and Extension License v1.0 in the finished portable package
 - Strengthens final package checks for version identity, required icon/license files, release boundaries, and release-only contents
 
-**Runtime verified on Windows:** Launch Clean restored the framework successfully; tested official mods worked in a normal modded session; the independently distributed World Builder tool worked as intended; and the unpinned taskbar icon remained correct across repeated launches and after a full shutdown/reboot.
+**Runtime verified on Windows:** Launch Clean restored the framework successfully; tested community mods worked in a normal modded session; the independently distributed World Builder tool worked as intended; and the unpinned taskbar icon remained correct across repeated launches and after a full shutdown/reboot.
 
 The CMZ Runtime implementation/file version remains **v1.0.1** while its assembly compatibility identity and mod-facing Framework compatibility remain **v1.0.0**. The CMZ Mod SDK/API remains **v1.0.0**.
 
@@ -58,7 +60,7 @@ The Manager supports the **CastleMiner Z 1.9.9.8 Steam/Windows** release.
 
 ## License, extensions, and responsible use
 
-CastleMiner Z Mod Manager itself is **proprietary software**. The community is expressly permitted to use the official Manager normally and to create and distribute original extensions through its supported extension mechanisms.
+CastleMiner Z Mod Manager itself is **proprietary software**. The community is expressly permitted to use the Mod Manager normally and to create and distribute original extensions through its supported extension mechanisms.
 
 Permitted community content includes, but is not limited to:
 
@@ -71,7 +73,7 @@ Permitted community content includes, but is not limited to:
 
 Extension authors retain ownership of their own original work, subject to any third-party rights involved. Compatible projects may truthfully state that they are made for, compatible with, or require CastleMiner Z Mod Manager.
 
-The Mod Manager itself may not be repackaged, rebranded, redistributed, sold, or published as a modified/derivative Manager without permission. Users should link others to an official distribution location rather than reuploading the Manager.
+The Mod Manager itself may not be repackaged, rebranded, redistributed, sold, or published as a modified/derivative Manager without permission. Users should link others to an AnlionGamer-designated distribution location rather than reuploading the Manager.
 
 The project is intended for legitimate modding. It must not be used to deliberately attack, crash, exploit, corrupt, impersonate, or otherwise harm other players, hosts, systems, or multiplayer sessions. Legitimate single-player use, consensual multiplayer modifications, host customization, accessibility work, debugging, interoperability, and good-faith security research remain permitted within the terms of the license.
 
@@ -89,7 +91,7 @@ Enabled runtime mods execute third-party code inside CastleMiner Z. Installed To
 
 CastleMiner Z Mod Manager is distributed without a paid Authenticode code-signing certificate. Windows may therefore show **Unknown publisher** or a Microsoft Defender SmartScreen warning for a new download.
 
-Download releases only from this official repository and verify the published SHA-256 checksum when desired. You should not need to disable Windows Security or antivirus protection to use the Mod Manager.
+Download releases only from this repository and verify the published SHA-256 checksum when desired. You should not need to disable Windows Security or antivirus protection to use the Mod Manager.
 
 ## Tools
 
