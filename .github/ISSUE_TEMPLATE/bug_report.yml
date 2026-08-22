@@ -15,7 +15,7 @@ body:
     attributes:
       label: Mod Manager version
       description: The CastleMiner Z Mod Manager version where the problem occurred.
-      placeholder: "1.1.2"
+      placeholder: "1.1.3"
     validations:
       required: true
 
