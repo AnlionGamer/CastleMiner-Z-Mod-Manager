@@ -35,8 +35,6 @@ This license does not claim ownership of independently created work merely becau
 
 Authors of independently created mods, tools, scenarios, themes, translations, configurations, integrations, plugins, documentation, or other extensions retain ownership of their own original material and may choose separate terms for that material, subject to applicable third-party rights.
 
-For CastleMiner Z Mod Manager specifically, independently created `.cmzmod` mods, `.cmztool` tools, themes, translations, configurations, presets, profiles, integrations, and other extensions using supported public interfaces are not considered redistribution of the Mod Manager merely because they are compatible with or require it.
-
 This section does not permit copying substantial portions of the Licensed Work into another product and treating the copied material as independently created.
 
 6. Identity, Attribution, and No Endorsement
@@ -85,4 +83,4 @@ Failure to enforce a provision in one instance does not waive the right to enfor
 
 Plain-language summary
 
-You may use the project, inspect its published source, and make private modifications. You may not sell it. Public redistribution of the original project or modified versions requires AnlionGamer's prior permission and must remain non-commercial. Independent extensions remain the property of their own authors, and compatible Mod Manager extensions may be created and distributed under their authors' own terms. Older copies already released under another license keep the permissions that accompanied those copies. Castle Miner Z and other third-party material remain the property of their respective rights holders.
+You may use the project, inspect its published source, and make private modifications. You may not sell it. Public redistribution of the original project or modified versions requires AnlionGamer's prior permission and must remain non-commercial. Independent extensions remain the property of their own authors. Older copies already released under another license keep the permissions that accompanied those copies. Castle Miner Z and other third-party material remain the property of their respective rights holders.
