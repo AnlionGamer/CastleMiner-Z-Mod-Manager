@@ -36,9 +36,9 @@ See [`RELEASE_NOTES_v1.1.3.md`](RELEASE_NOTES_v1.1.3.md) for full details.
 - Multiple mod profiles
 - Dependency and compatibility resolution
 - Reusable per-mod settings, including boolean, integer, decimal, text, choice, and multi-select controls
-- Launch CastleMiner Z with the active mod profile
+- Launch Castle Miner Z with the active mod profile
 - Launch the game clean without the framework/mods
-- Validate CastleMiner Z 1.9.9.8 game files
+- Validate Castle Miner Z 1.9.9.8 game files
 - Repair missing or modified game files from a configured clean backup
 - General-purpose CMZ Runtime and Mod SDK framework
 - Install and manage independently distributed `.cmztool` utilities from the **Tools** page
@@ -56,13 +56,17 @@ See [`RELEASE_NOTES_v1.1.3.md`](RELEASE_NOTES_v1.1.3.md) for full details.
 5. Select your CastleMiner Z installation folder if it is not detected automatically.
 6. Follow the Mod Manager's framework setup/update prompts.
 
-The Manager supports the **CastleMiner Z 1.9.9.8 Steam/Windows** release.
+The Manager supports the **Castle Miner Z 1.9.9.8 Steam/Windows** release.
 
 ## License, extensions, and responsible use
 
-CastleMiner Z Mod Manager itself is **proprietary software**. The community is expressly permitted to use the Mod Manager normally and to create and distribute original extensions through its supported extension mechanisms.
+The current repository `main` branch and future CastleMiner Z Mod Manager work are governed by the **AnlionGamer Community Distribution Terms v1.0**. See [`LICENSE.md`](LICENSE.md).
 
-Permitted community content includes, but is not limited to:
+Normal use, inspection of material actually published in the repository, and private modification are allowed under the current terms. Public redistribution of the Mod Manager itself, its source/material, packaged releases, forks, or modified/derivative Manager builds requires **prior permission from AnlionGamer** and must remain **non-commercial**. Sale and paid access are prohibited without separate permission.
+
+The community remains expressly permitted to create and distribute independently authored extensions through the Manager's supported extension mechanisms. Compatible extensions are not considered redistribution of the Mod Manager merely because they require or interoperate with it.
+
+Permitted independently authored community content includes, but is not limited to:
 
 - `.cmzmod` gameplay mods
 - `.cmztool` utilities
@@ -71,13 +75,13 @@ Permitted community content includes, but is not limited to:
 - configurations, presets, and shareable profiles
 - integrations and other extensions using documented public APIs, SDK interfaces, schemas, package formats, or theme formats
 
-Extension authors retain ownership of their own original work, subject to any third-party rights involved. Compatible projects may truthfully state that they are made for, compatible with, or require CastleMiner Z Mod Manager.
+Extension authors retain ownership of their own original work, subject to any third-party rights involved, and may choose separate terms for that independent work. Compatible projects may truthfully state that they are made for, compatible with, or require CastleMiner Z Mod Manager.
 
-The Mod Manager itself may not be repackaged, rebranded, redistributed, sold, or published as a modified/derivative Manager without permission. Users should link others to an AnlionGamer-designated distribution location rather than reuploading the Manager.
+Users wishing to share the Mod Manager with others should link to an AnlionGamer-designated distribution location rather than reuploading the Manager unless separate redistribution permission has been granted.
+
+The already-published v1.1.3 portable package retains the license terms distributed inside that package. Changing the repository's current terms does not revoke permissions already granted to previously distributed copies.
 
 The project is intended for legitimate modding. It must not be used to deliberately attack, crash, exploit, corrupt, impersonate, or otherwise harm other players, hosts, systems, or multiplayer sessions. Legitimate single-player use, consensual multiplayer modifications, host customization, accessibility work, debugging, interoperability, and good-faith security research remain permitted within the terms of the license.
-
-See [`LICENSE.md`](LICENSE.md) for the complete **CastleMiner Z Mod Manager Community Use and Extension License v1.0**.
 
 ## Privacy and trust
 
@@ -85,11 +89,11 @@ CastleMiner Z Mod Manager does not include first-party telemetry or analytics. D
 
 Diagnostic sanitization is intended to reduce accidental disclosure, not to make arbitrary files safe to publish without review.
 
-Enabled runtime mods execute third-party code inside CastleMiner Z. Installed Tools execute as separate third-party processes. Neither is sandboxed. Only install packages from authors you trust. Package validation and hashes verify package integrity; they do not prove that third-party code is trustworthy.
+Enabled runtime mods execute third-party code inside Castle Miner Z. Installed Tools execute as separate third-party processes. Neither is sandboxed. Only install packages from authors you trust. Package validation and hashes verify package integrity; they do not prove that third-party code is trustworthy.
 
 ## Windows security notice
 
-CastleMiner Z Mod Manager is distributed without a paid Authenticode code-signing certificate. Windows may therefore show **Unknown publisher** or a Microsoft Defender SmartScreen warning for a new download.
+Castle Miner Z Mod Manager is distributed without a paid Authenticode code-signing certificate. Windows may therefore show **Unknown publisher** or a Microsoft Defender SmartScreen warning for a new download.
 
 Download releases only from this repository and verify the published SHA-256 checksum when desired. You should not need to disable Windows Security or antivirus protection to use the Mod Manager.
 
@@ -111,7 +115,7 @@ English (United States) is the authoritative fallback language.
 
 GitHub Issues may be used for Mod Manager bug reports and feature requests. For a bug report, include the Mod Manager version, Windows version, what happened, what you expected, and reproduction steps. A sanitized diagnostics ZIP from the Manager can be attached when useful.
 
-**Review diagnostic files before sharing them publicly, and do not upload CastleMiner Z game files or your full game installation to an issue.**
+**Review diagnostic files before sharing them publicly, and do not upload Castle Miner Z game files or your full game installation to an issue.**
 
 ## Third-party software
 
