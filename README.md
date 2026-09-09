@@ -100,7 +100,7 @@ Enabled runtime mods execute third-party code inside Castle Miner Z. Installed T
 
 Castle Miner Z Mod Manager is distributed without a paid Authenticode code-signing certificate. Windows may therefore show **Unknown publisher** or a Microsoft Defender SmartScreen warning for a new download.
 
-Download releases only from this repository and verify the published SHA-256 checksum when desired. You should not need to disable Windows Security or antivirus protection to use the Mod Manager.
+Download releases only from this repository. When file verification is desired, use the SHA-256 digest GitHub displays for the uploaded release asset. You should not need to disable Windows Security or antivirus protection to use the Mod Manager.
 
 ## Tools
 
@@ -144,11 +144,9 @@ The distributed Mod Manager includes **Harmony 2.4.2**, licensed under the MIT L
 
 ## Release integrity
 
-SHA-256 for `CMZ_Mod_Manager_v1.2.0_Portable.zip`:
+GitHub automatically publishes a SHA-256 digest for each uploaded release asset. The digest shown by GitHub for the asset on the **Releases** page is the authoritative public checksum for that uploaded file.
 
-`312A44DA4D0EC9C58D84386B160616D8049C3C1F81B7214905E60B0130AED272`
-
-The checksum is also published in [`CMZ_Mod_Manager_v1.2.0_SHA256.txt`](CMZ_Mod_Manager_v1.2.0_SHA256.txt).
+This repository does not separately publish manual checksums for release files. SHA-256 values used inside `.cmzmod` and `.cmztool` manifests, install receipts, validation baselines, and other package-integrity systems remain part of the Mod Manager's technical validation model; they are not alternate public release checksums.
 
 ## Project status
 
