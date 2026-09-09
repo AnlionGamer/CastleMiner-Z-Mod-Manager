@@ -45,7 +45,7 @@ v1.2.0 keeps existing Format-1 packages supported and adds downgrade-safe Format
 - Adds a required `prelaunch` object for startup-capable Tools.
 - Supports deterministic Tool dependencies and startup ordering.
 - Automatic startup is restricted to receipt-validated Format-2 Tools.
-- The Manager revalidates manifest identity, entry executable identity, and declared payload SHA-256 values immediately before automatic execution.
+- The Manager revalidates manifest identity, entry executable identity, and declared payload integrity immediately before automatic execution.
 
 Format-1 `.cmzmod` and `.cmztool` packages remain supported.
 
@@ -54,7 +54,7 @@ Format-1 `.cmzmod` and `.cmztool` packages remain supported.
 v1.2.0 strengthens package handling without intentionally breaking valid legacy packages.
 
 - External mod and Tool packages are copied into Manager-owned private staging before validation/extraction.
-- Package size, payload count, expanded-size, canonical relative-path, reserved metadata, declared-payload, and SHA-256 gates are enforced.
+- Package size, payload count, expanded-size, canonical relative-path, reserved metadata, declared-payload, and integrity gates are enforced.
 - Installed Format-2 manifests are tied to Manager-generated install receipts.
 - Self-dependency, self-ordering, duplicate/contradictory startup requirements, and malformed startup relationships are rejected before Runtime launch.
 - Mod and Tool MultiSelect schemas reject blank/duplicate choices, invalid defaults, undeclared defaults, and duplicate defaults.
@@ -114,7 +114,7 @@ v1.2.0 expands the localization contract to cover the startup orchestration, sec
 - Portable output name: `CMZ_Mod_Manager_v1.2.0_Portable.zip`
 - Public portable package contains no builder/source tree and no bundled `.cmzmod`, `.cmztool`, or `.cmzscenario` packages.
 
-The generated portable package includes `BUILD_VERIFICATION.txt` and `OUTPUT_MANIFEST.txt`. Automatic build/regression verification passed for the final Rev41 FIX6 package, including startup orchestration, package/tool regression, theme contract, frozen Runtime/SDK hashes, Harmony validation, baseline validation, localization parity, and release-boundary checks.
+The generated portable package includes `BUILD_VERIFICATION.txt` and `OUTPUT_MANIFEST.txt`. Automatic build/regression verification passed for the final Rev41 FIX6 package, including startup orchestration, package/tool regression, theme contract, frozen Runtime/SDK integrity baselines, Harmony validation, baseline validation, localization parity, and release-boundary checks.
 
 Automatic regression verification is not a blanket guarantee of every third-party startup Tool or every Windows visual configuration; third-party Tools remain separate executable programs and must be trusted and tested by their authors/users.
 
@@ -140,10 +140,6 @@ Download **`CMZ_Mod_Manager_v1.2.0_Portable.zip`** from this release's **Assets*
 
 Do not use GitHub's automatically generated **Source code (zip)** or **Source code (tar.gz)** archives as the Mod Manager download.
 
-## Release integrity
-
-GitHub automatically publishes the SHA-256 digest of the uploaded release asset. The digest displayed by GitHub for `CMZ_Mod_Manager_v1.2.0_Portable.zip` is the authoritative public checksum for that file.
-
 ## License and extension ecosystem
 
 The v1.2.0 portable package contains the **CastleMiner Z Mod Manager Community Use and Extension License v1.0** distributed with that package.
@@ -160,13 +156,13 @@ Diagnostic exports redact common local paths, Steam64 IDs, and custom Manager pr
 
 Enabled runtime mods execute third-party code inside CastleMiner Z. Installed Tools execute as separate third-party processes. Neither is sandboxed. Startup-capable Tools can execute automatically before a modded game launch when the active profile requires/selects them, so only install startup Tools from sources you trust.
 
-Package validation, install receipts, and hashes verify package integrity and identity; they do not establish that third-party code is safe or trustworthy.
+Package validation, install receipts, and integrity checks do not establish that third-party code is safe or trustworthy.
 
 ## Windows security notice
 
-CastleMiner Z Mod Manager is distributed without a paid Authenticode certificate. Windows may therefore show an **Unknown publisher** or Microsoft Defender SmartScreen warning for a new download.
+Castle Miner Z Mod Manager is distributed without a paid Authenticode certificate. Windows may therefore show an **Unknown publisher** or Microsoft Defender SmartScreen warning for a new download.
 
-Obtain the package from this official repository and use GitHub's displayed SHA-256 release-asset digest when file verification is desired. Do not disable Windows Security or antivirus protection just to run the Mod Manager.
+Obtain the package from this official repository. Do not disable Windows Security or antivirus protection just to run the Mod Manager.
 
 ## Distribution contents
 
