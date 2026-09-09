@@ -19,7 +19,7 @@ v1.2.0 adds a generic Manager-owned startup orchestration system for trusted ext
 - Resolves startup companions through a deterministic Manager-owned dependency/order graph before Steam/CastleMiner Z launches.
 - Uses readiness protocol 1 with session/tool/PID/nonce identity checks instead of fixed startup sleeps.
 - Rolls back Manager-started companions when a required prelaunch Tool fails before game launch.
-- Revalidates startup Tool install receipts, manifest identity, entry executable identity, and declared payload SHA-256 before automatic execution.
+- Revalidates startup Tool install receipts, manifest identity, entry executable identity, and declared payload integrity before automatic execution.
 - Strengthens package staging, canonical-path, resource-limit, metadata, receipt, and payload-integrity checks.
 - Fixes legacy Format-1 `.cmzmod`/`.cmztool` installation when ZIP payload entries use backslash separators.
 - Hardens WPF theme coverage and semantic text contrast for RadioButton, TabControl/TabItem, Expander, ProgressBar, ScrollBar, ToolTip, and existing controls.
@@ -27,7 +27,7 @@ v1.2.0 adds a generic Manager-owned startup orchestration system for trusted ext
 - Extends diagnostics with sanitized startup state and Format-2 metadata.
 - Keeps all 23 bundled UI languages in parity with the new v1.2.0 startup/security/status UI.
 
-The final Rev41 FIX6 package passed its automatic Windows build/regression verification, including startup-orchestration, package/tool compatibility, theme-contract, frozen Runtime/SDK hash, Harmony, baseline, localization, and release-boundary checks.
+The final Rev41 FIX6 package passed its automatic Windows build/regression verification, including startup-orchestration, package/tool compatibility, theme-contract, frozen Runtime/SDK integrity baselines, Harmony, baseline, localization, and release-boundary checks.
 
 The CMZ Runtime implementation/file version remains **v1.0.1** while its assembly compatibility identity and mod-facing Framework compatibility remain **v1.0.0**. The CMZ Mod SDK/API remains **v1.0.0**.
 
@@ -94,13 +94,13 @@ CastleMiner Z Mod Manager does not include first-party telemetry or analytics. D
 
 Diagnostic sanitization is intended to reduce accidental disclosure, not to make arbitrary files safe to publish without review.
 
-Enabled runtime mods execute third-party code inside Castle Miner Z. Installed Tools execute as separate third-party processes. Neither is sandboxed. Startup-capable Format-2 Tools may execute automatically before a Modded Launch when required/selected by the active profile. Only install packages from authors you trust. Package validation, receipts, and hashes verify package integrity; they do not prove that third-party code is trustworthy.
+Enabled runtime mods execute third-party code inside Castle Miner Z. Installed Tools execute as separate third-party processes. Neither is sandboxed. Startup-capable Format-2 Tools may execute automatically before a Modded Launch when required/selected by the active profile. Only install packages from authors you trust. Package validation, receipts, and integrity checks verify package integrity; they do not prove that third-party code is trustworthy.
 
 ## Windows security notice
 
 Castle Miner Z Mod Manager is distributed without a paid Authenticode code-signing certificate. Windows may therefore show **Unknown publisher** or a Microsoft Defender SmartScreen warning for a new download.
 
-Download releases only from this repository. When file verification is desired, use the SHA-256 digest GitHub displays for the uploaded release asset. You should not need to disable Windows Security or antivirus protection to use the Mod Manager.
+Download releases only from this repository. You should not need to disable Windows Security or antivirus protection to use the Mod Manager.
 
 ## Tools
 
@@ -141,12 +141,6 @@ The distributed Mod Manager includes **Harmony 2.4.2**, licensed under the MIT L
 - Runtime LaunchPlan: **Format 1**
 - Runtime LaunchAuthorization: **Format 1**
 - Supported game: **CastleMiner Z 1.9.9.8 — Steam / Windows**
-
-## Release integrity
-
-GitHub automatically publishes a SHA-256 digest for each uploaded release asset. The digest shown by GitHub for the asset on the **Releases** page is the authoritative public checksum for that uploaded file.
-
-This repository does not separately publish manual checksums for release files. SHA-256 values used inside `.cmzmod` and `.cmztool` manifests, install receipts, validation baselines, and other package-integrity systems remain part of the Mod Manager's technical validation model; they are not alternate public release checksums.
 
 ## Project status
 
