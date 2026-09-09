@@ -28,15 +28,13 @@ Download **`CMZ_Mod_Manager_v1.0.0.zip`** from this release's Assets section.
 
 Do not use GitHub's automatically generated **Source code (zip)** or **Source code (tar.gz)** archives as the Mod Manager download.
 
-## Integrity
+## Release integrity
 
-SHA-256 for `CMZ_Mod_Manager_v1.0.0.zip`:
-
-`0CE1095CD3F71C388BA5FF2E7B1F69CD3C4F2CBEB95641D6029D33D9751F0F01`
+GitHub automatically publishes the SHA-256 digest of the uploaded release asset. The digest displayed by GitHub for the release asset is the authoritative public checksum for that file.
 
 ## Windows security notice
 
-CastleMiner Z Mod Manager is currently distributed without a paid Authenticode certificate. Windows may therefore show an **Unknown publisher** or Microsoft Defender SmartScreen warning for a new download. Obtain the package from this official repository and verify the SHA-256 checksum when desired.
+CastleMiner Z Mod Manager is currently distributed without a paid Authenticode certificate. Windows may therefore show an **Unknown publisher** or Microsoft Defender SmartScreen warning for a new download. Obtain the package from this official repository and use GitHub's displayed release-asset digest when file verification is desired.
 
 Do not disable Windows Security or antivirus protection just to run the Mod Manager.
 
